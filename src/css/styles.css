@@ -10,7 +10,7 @@
 
 
 :root{
-    --image-width: 400px;
+    --image-width: 600px;
 }
 
 * {
@@ -29,7 +29,8 @@ html,body{
 
 body{
     display:flex;
-    gap: 1rem;
+    justify-content: flex-start;
+    background-color: rgb(235,235,235);
 }
 
 .imgcontainer{
@@ -41,6 +42,7 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
+    flex-shrink: 0;
 }
 
 .textlogo{
@@ -65,3 +67,33 @@ div{
     width: var(--image-width);
 }
 
+div.everyform > * {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+div.everyform{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow:1;
+    text-wrap: balance;
+}
+
+p{
+    max-width: 65ch;
+}
+
+p.lastp{
+    margin-top: 1.7em;
+    margin-bottom: 3em;
+}
+
+form{
+    background-color: white;
+    padding: 1.5rem;
+}
+
+button[type="submit"]{
+    display: inline-block !important;
+}
