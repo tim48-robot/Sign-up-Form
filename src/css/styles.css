@@ -7,9 +7,20 @@
     font-display: swap;
 }
 
+@font-face{
+    font-family: 'BabyKimo';
+    src: url('../assets/BabyKimo.woff2') format('woff2'),
+         url('../assets/BabyKimo.woff') format('woff'),
+    color: gray;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 :root{
+    --paddingmargin: 2rem;
     --image-width: 600px;
 }
 
@@ -58,6 +69,30 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+input{
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #E5e7eb;
+}
+
+input:focus {
+    outline:none;
+    border-color: #118cde;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* old browser prefixes for webkit based like safari, chrome etc */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
 h2{
     text-align: center;
 }
@@ -67,20 +102,22 @@ div{
     width: var(--image-width);
 }
 
-div.everyform > * {
-    padding-left: 2rem;
-    padding-right: 2rem;
+div.everyform > *:not(button) {
+    padding-left: var(--paddingmargin);
+    padding-right: var(--paddingmargin);
 }
 
 div.everyform{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     flex-grow:1;
     text-wrap: balance;
 }
 
 p{
+    font-size: large;
     max-width: 65ch;
 }
 
@@ -89,11 +126,54 @@ p.lastp{
     margin-bottom: 3em;
 }
 
-form{
-    background-color: white;
-    padding: 1.5rem;
+p:not(.account){
+    font-size: x-large;
+    font-weight: 600;
 }
 
-button[type="submit"]{
-    display: inline-block !important;
+form{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 1.5rem;
+    padding-right: 7rem !important;
 }
+
+button{ 
+    padding: 0.7rem 2.5rem;
+    border-radius: 5px;
+    border-color: transparent;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #d24b4b;
+    margin-left: var(--paddingmargin);
+    margin-top: var(--paddingmargin);
+    margin-bottom: var(--paddingmargin)
+}
+
+label{
+    font-family: "BabyKimo",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: 275px;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+span{
+    cursor: pointer;
+    color: #d24b4b;
+}
+
+
+div.outer{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: larger;
+}
+
+input:invalid{
+    border-color: rgb(242, 51, 51)
+}
+
