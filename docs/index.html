@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <!--png thats specified for tab, taskbar, shortcut, apple icon and android icon-->
+    <link rel="icon" sizes="16x16" href="favicon-16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32.png" type="image/png">
+    <link rel="icon" sizes="48x48" href="favicon-48.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-apple.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+
+
+    <!--fallback (older browser, network issue, file/server error etc)-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="/src/js/script.js" defer></script>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    
+</head>
+<body>
+    <div class="imgcontainer">
+        <div class="textlogo">
+            <img class="logo" src="fixicon.png" type="image/png">
+            <h2>Timothy</h2>
+        </div>
+    </div>
+
+
+    <div class="everyform">
+        <p>This is not a real online service! You know you need something like this in your life to help you be the best version that you are</p>
+        <p>Sign up <em>now</em> to get started</p>
+        <p class="lastp">You <em>know</em> you want to</p>
+
+        <form action="" method="post" class="onlyform" id="buttonlink">
+            <div class="outer">Let's Do This!</div>
+            <label for="firstname"> FIRST NAME
+                <input type="text" id="firstname" name="firstname">
+            </label>
+
+            <label for="lastname"> LAST NAME
+                <input type="text" id="lastname" name="lastname">
+            </label>
+
+            <label for="email"> EMAIL
+                <input type="email" id="email" name="email">
+            </label>
+
+            <label for="phonenumber"> PHONE NUMBER
+                <input type="text" id="number" inputmode="numeric" pattern="[0][8][0-9]{8}[0-8]*">
+            </label>
+
+            <label for="password"> PASSWORD
+                <input type="password" id="password" placeholder="" required>
+            </label>
+
+            <label for="confirmpassword"> CONFIRM PASSWORD
+                <input type="password" id="confirmpassword" required>
+            </label>
+
+        </form>
+
+        <button type="submit" form="buttonlink">
+            Create Account
+        </button>
+
+        <p class="account">Already have an account? <span>Log in</span></p>
+    </div>z
+
+
+
+
+</body>
+</html>
